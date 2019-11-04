@@ -14,19 +14,28 @@
                         </div>
                     @endif
 
-                    Here are cars that you have Hired!
+                    Here are cars that are in the System
 
                     <table class="table table-bordered">
                             <thead>
                             <tr >
-                                <th>CarID</th>
-                                <th>Price/Day</th>
+                               
+                                <th>Model &amp; Make</th>
                                 <th>Model & Make</th>
                                 <th>Fuel</th>
-                                <th>Hired</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($vehicles as $vehicle)
+                            <tr>
+                                <td>{{$vehicle->make_model}}</td>
+                                <td>{{$vehicle->fuel_type}}</td>
+                                <td>{{$vehicle->price_day}}</td>
+                                <td>@if(Auth::user()->id == 1)<a href="/vehicle/{{$vehicle->id}}/edit" class="btn btn-success">Edit</a> @else<a href="#" class="btn btn-warning">Reserve</a> @endif</td>
+                                
+                            </tr>
+                            @endforeach
                             <tr>
                                 <td></td>
                                 <td></td>

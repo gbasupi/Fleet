@@ -15,9 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cars', function () {
-    return view('cars');
-});
+/**
+ * 
+*Route::get('/cars', function () {
+ *   return view('cars');
+*});
+ */
+
+Route::resource('/cars', 'carsController');
+
+Route::resource('/vehicle', 'VehicleController');
 
 Auth::routes();
 

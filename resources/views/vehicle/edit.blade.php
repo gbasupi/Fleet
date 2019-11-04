@@ -7,18 +7,19 @@
         <div class="col-md-8">
     
             <div class="card">
-                <div class="card-header">{{ __('Register A Car') }}</div>
+                <div class="card-header">Edit Vehicle</div>
 
                 <div class="card-body">
 
-                    <form method="post" action="{{route('cars.store')}}">
+                    <form method="post" action="/vehicle/{{$vehicle->id}}">
+                    {{method_field('PATCH')}}
                     @csrf
 
                         <div class="form-group row">
-                            <label for="model" class="col-md-4 col-form-label text-md-right">{{ __('Make & Model') }}</label>
+                            <label for="model"  class="col-md-4 col-form-label text-md-right">{{ __('Make & Model') }}</label>
 
                             <div class="col-md-6">
-                                <input id="model" type="text" class="form-control @error('name') is-invalid @enderror" name="model" >
+                                <input id="model" type="text" class="form-control @error('name') is-invalid @enderror" value="{{$vehicle->make_model}}" name="make_model" >
 
                             </div>
                         </div>
@@ -27,7 +28,7 @@
                             <label for="fuel" class="col-md-4 col-form-label text-md-right">{{ __('Fuel Type') }}</label>
 
                             <div class="col-md-6">
-                                <input id="fuel" type="text" class="form-control @error('name') is-invalid @enderror" name="fuel" >
+                                <input id="fuel" type="text" class="form-control @error('name') is-invalid @enderror" value="{{$vehicle->fuel_type}}" name="fuel_type" >
 
                             </div>
                         </div>
@@ -36,7 +37,7 @@
                             <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('Price per Day') }}</label>
 
                             <div class="col-md-6">
-                                <input id="price" type="number" class="form-control @error('name') is-invalid @enderror" name="price" >
+                                <input id="price" type="number" class="form-control @error('name') is-invalid @enderror" value="{{$vehicle->price_day}}" name="price_day" >
 
                             </div>
                         </div>
@@ -45,8 +46,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                <button type="submit" class="btn btn-success">
+                                    {{ __('Edit') }}
                                 </button>
                             </div>
                         </div>

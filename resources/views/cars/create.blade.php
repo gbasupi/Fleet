@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -12,8 +13,7 @@
                 <div class="card-body">
 
                     <form method="post" action="{{route('cars.store')}}">
-                    @csrf
-
+                        @csrf
                         <div class="form-group row">
                             <label for="model" class="col-md-4 col-form-label text-md-right">{{ __('Make & Model') }}</label>
 

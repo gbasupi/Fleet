@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@if(Auth::user()->id == 1)
 @section('content')
 
 <div class="container">
@@ -11,14 +12,14 @@
 
                 <div class="card-body">
 
-                    <form method="post" action="{{route('cars.store')}}">
+                    <form method="post" action="/vehicle">
                     @csrf
 
                         <div class="form-group row">
                             <label for="model" class="col-md-4 col-form-label text-md-right">{{ __('Make & Model') }}</label>
 
                             <div class="col-md-6">
-                                <input id="model" type="text" class="form-control @error('name') is-invalid @enderror" name="model" >
+                                <input id="model" type="text" class="form-control @error('name') is-invalid @enderror" name="make_model" >
 
                             </div>
                         </div>
@@ -27,7 +28,7 @@
                             <label for="fuel" class="col-md-4 col-form-label text-md-right">{{ __('Fuel Type') }}</label>
 
                             <div class="col-md-6">
-                                <input id="fuel" type="text" class="form-control @error('name') is-invalid @enderror" name="fuel" >
+                                <input id="fuel" type="text" class="form-control @error('name') is-invalid @enderror" name="fuel_type" >
 
                             </div>
                         </div>
@@ -36,7 +37,7 @@
                             <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('Price per Day') }}</label>
 
                             <div class="col-md-6">
-                                <input id="price" type="number" class="form-control @error('name') is-invalid @enderror" name="price" >
+                                <input id="price" type="number" class="form-control @error('name') is-invalid @enderror" name="price_day" >
 
                             </div>
                         </div>
@@ -58,3 +59,8 @@
 </div>
 
 @endsection
+@else
+@section('content')
+    <div class="container"><a href="/home" class="btn btn-info">Return Home</a></div>
+@endsection
+@endif
