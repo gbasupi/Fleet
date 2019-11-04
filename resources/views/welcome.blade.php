@@ -89,7 +89,11 @@
 
                   <div class="">
                     <p class="subtitle txt-grey mt-4" font color="black">
-                    <font color="black">Bw Jobs 4 Graduates stands to prevent and cure unemployment amongst the youth of Botswana, the organization prepares and equip the youth with leadership skills, business skills, self-responsibility and encouraging entrepreneurship among the youth to prepare them to effectively and productively respond to the challenges of school, university, the corporate world, labour market and society at large.
+                    <font color="black">
+                    Fleet management system for an institution of 
+                    higher learning based in Tlokweng. The institution 
+                    has a fleet of cars, a mix of combis, vans, sedans, buses, and trucks.
+                    These cars are used by both staff and students when going on official trips. 
                     </font>
                     </p>
 
