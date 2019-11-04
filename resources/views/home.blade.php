@@ -19,16 +19,20 @@
                     <table class="table table-bordered">
                             <thead>
                             <tr >
-                                <th>Name</th>
-                                <th>ID</th>
-                                <th>Email</th>
+                                <th>CarID</th>
+                                <th>Price/Day</th>
+                                <th>Model & Make</th>
+                                <th>Fuel</th>
+                                <th>Hired</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>GOntse</td>
-                                <td>G</td>
-                                <td>df</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             </tbody>
                         </table>
@@ -37,4 +41,5 @@
         </div>
     </div>
 </div>
+
 @endsection
