@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('adminHome', function () {
+Route::get('/cars', function () {
     return view('cars');
 });
 

@@ -14,7 +14,24 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Here are cars that you have Hired!
+
+                    <table class="table table-bordered">
+                            <thead>
+                            <tr >
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>Email</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>GOntse</td>
+                                <td>G</td>
+                                <td>df</td>
+                            </tr>
+                            </tbody>
+                        </table>
                 </div>
             </div>
         </div>
